@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Add Item</h2>
+<form method="POST">
+  {% csrf_token %}
+  <input name="name" placeholder="Name"><br>
+  <textarea name="description" placeholder="Description"></textarea><br>
+  <input name="price" placeholder="Price"><br>
+  <button>Add</button>
+</form>
+
+</body>
+</html>
