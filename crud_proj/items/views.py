@@ -18,7 +18,7 @@ def add_item(request):
             price=request.POST['price']
         )
         return redirect('dashboard')
-    return render(request, 'add_item.html')
+    return render(request, 'add_items.html')
 
 
 @login_required
@@ -30,7 +30,8 @@ def edit_item(request, id):
         item.price = request.POST['price']
         item.save()
         return redirect('dashboard')
-    return render(request, 'edit_item.html', {'item': item})
+    return render(request, 'edit_items.html', {'item': item})
+
 
 
 @login_required
